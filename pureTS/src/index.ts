@@ -9,7 +9,7 @@
 // }
 
 class User {
-  private courseCount: number = 1
+  protected courseCount: number = 1
   readonly city: string = 'Deoli'
   constructor(public name: string, private email: string) {
     this.name = name
@@ -33,6 +33,13 @@ class User {
 
   private deleteToken() {
     console.log('Token deleted')
+  }
+}
+
+class SubUser extends User {
+  isFamily: boolean = true
+  changeCourseCount() {
+    this.courseCount = 4 // can be accessible 'cause it is protected.
   }
 }
 

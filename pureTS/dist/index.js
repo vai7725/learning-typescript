@@ -33,4 +33,13 @@ class User {
         console.log('Token deleted');
     }
 }
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this.courseCount = 4; // can be accessible 'cause it is protected.
+    }
+}
 const vaibhav = new User('vaibhav', 'vaibhav@v.c');
