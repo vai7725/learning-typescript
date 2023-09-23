@@ -19,4 +19,4 @@ class Insta extends TakePhoto {
   }
 }
 
-const vai = new Insta('vai', 'vai', 38947) // no vars can be created directly by abstract classes
+const vai = new Insta('vai', 'vai', 38947)
